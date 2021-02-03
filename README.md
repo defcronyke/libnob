@@ -1,4 +1,4 @@
-# nob
+# libnob
 
 Copyright (c) 2021 Jeremy Carter <jeremy@jeremycarter.ca>
 
