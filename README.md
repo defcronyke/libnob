@@ -1,4 +1,4 @@
-# libnob - NOB Open Base Library  
+# libnob - Nob Open Base Library  
   
 Copyright (c) 2021 Jeremy Carter <jeremy@jeremycarter.ca>  
   

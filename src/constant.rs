@@ -14,18 +14,6 @@
     terms from all of the different technologies apply, with
     this project's license terms taking first priority.
 */
-mod app;
-pub mod constant;
-mod id;
-mod kind;
-mod obj;
-mod result;
-mod root;
-
-use app::NobApp;
-pub use result::{NobResultError, NobResultErrorCode, NobResultSuccess};
-pub use root::NobRoot;
-
-pub fn main(app: &dyn NobApp) -> Result<NobResultSuccess, (NobResultError, NobResultErrorCode)> {
-    app.main()
-}
+pub(crate) const NOB_NAME_DEFAULT: &str = "Unnamed";
+pub const NOB_NAME: &str = "Nob";
+pub const NOB_VERSION: &str = "v0.1.x";

@@ -15,10 +15,10 @@
     this project's license terms taking first priority.
 */
 use super::*;
+use constant::NOB_NAME_DEFAULT;
 use id::NobID;
 use kind::{NobKind, NobRootKind};
 use obj::NobObj;
-use NOB_NAME_DEFAULT;
 
 use serde::{Deserialize, Serialize};
 use std::fmt::Display;
@@ -66,15 +66,17 @@ impl NobRoot {
         let name = name.unwrap_or(NOB_NAME_DEFAULT);
         let tag = format!("[{:?}::{:?}::{:?}::{}]", GLOBAL_ID, PARENT_KIND, KIND, name);
 
-        println!("New object created: {}", &tag);
-
-        Self {
+        let res = Self {
             global_id: GLOBAL_ID,
             parent_kind: PARENT_KIND,
             kind: KIND,
             name: name.to_string(),
             tag,
-        }
+        };
+
+        println!("New object created: {}", res.tag);
+
+        res
     }
 }
 
